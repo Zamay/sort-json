@@ -1,7 +1,6 @@
 /**
  * Created by zamaj on 10.04.2017.
  */
-// http://mockbin.com/bin/b4971d97-86d0-4adb-a33c-ab1419f282fb
 var employees = [
     {"title":"United Kingdom","text":"The United Kingdom of Great Britain and Northern Ireland, commonly known as the United Kingdom (UK) or Britain, is a sovereign state in Europe."},
     {"title":"France","text":"France, officially the French Republic (French: R\u00e9publique fran\u00e7aise), is a unitary sovereign state comprising territory in western Europe and several overseas regions and territories."},
@@ -45,7 +44,7 @@ $(document).ready(function() {
         )
     }
 
-    //accardion
+    //accоrdion
     function accord() {
         $('.wrapper > dd').not(':first-of-type').hide();
         $('.wrapper > dt').on('click', function() {
@@ -60,7 +59,7 @@ $(document).ready(function() {
         });
     }
 
-    //delete 
+    //delete
     function del() {
         $('.wrapper p > i').on('click', function() {
             let thisP  = $(this).closest('p');
@@ -89,43 +88,3 @@ $(document).ready(function() {
         }
     })
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//--------------------//
-// // Сортируем по спаданию title
-//
-// function sortTitleDown() {
-//     let arr = employees.sort(function (a, b) {
-//         var titleA = a.title.toLowerCase(), titleB = b.title.toLowerCase();
-//         return (titleA > titleB) ? -1 : 1;
-//     });
-//
-//     printArr(arr);
-// }
-// // sortTitleDown();
-//
-// // Сортируем по длине
-//
-// function sorttextLength() {
-//     let arr = employees.sort(function (a, b) {
-//         var textA = a.text.length, textB = a.text.length;
-//         console.log(textA , textB)
-//         return (textA < textB) ? -1 : 1;
-//     })
-//
-//     printArr(arr);
-// }
-// // sorttextLength()
