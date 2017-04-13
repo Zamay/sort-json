@@ -51,11 +51,11 @@ $(document).ready(function() {
         $('.wrapper dl > dd').hide();
         $('.wrapper dl > dt').on('click', function() {
             let findText = $(this).next();
-            let findWrap = $(this).closest('dl');
+            let findWrap = $(this).closest('.wrapper');
             if (findText.is(':visible')) {
                 findText.slideUp('fast');
             } else {
-                findWrap.find('> dd').slideUp('fast');
+                findWrap.find('dl > dd').slideUp('fast');
                 findText.slideDown('fast');
             }
         });
