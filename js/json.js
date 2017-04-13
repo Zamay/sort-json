@@ -12,7 +12,6 @@ var employees = [
 $(document).ready(function() {
 
     // Сортируем по title
-
     function sortTitleUp() {
         let arr = employees.sort(function (a, b) {
             var titleA = a.title.toLowerCase(), titleB = b.title.toLowerCase();
@@ -61,12 +60,11 @@ $(document).ready(function() {
         });
     }
 
-    //delete - это ппц.
+    //delete
     function del() {
         $('.wrapper p > i').on('click', function() {
             let findDl  = $(this).closest('dl');
             $(findDl).remove();
-
         });
     }
 
