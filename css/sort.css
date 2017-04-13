@@ -5,25 +5,28 @@ body {
   width: 50%;
   margin: 4rem auto; }
 
-.wrapper > dt {
+.wrapper dl {
+  margin: 0; }
+
+.wrapper dl > dt {
   font-size: 24px;
   padding: .5em 1.2rem;
   background-color: #094681;
   color: #e4f1fe;
   cursor: pointer; }
 
-.wrapper > dd {
+.wrapper dl > dd {
   background-color: #e0e0e0;
   color: #1c2833;
   padding: 1rem;
   margin-left: 0;
   line-height: 1.6em; }
 
-.wrapper > p {
+.wrapper dl > p {
   position: absolute;
   right: 26%;
   cursor: pointer; }
-  .wrapper > p i {
+  .wrapper dl > p i {
     color: white; }
 
 .button {

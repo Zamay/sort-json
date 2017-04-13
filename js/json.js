@@ -37,19 +37,21 @@ $(document).ready(function() {
     function printArr(obj) {
         obj.forEach(
             function (ob) {
-                $(".wrapper").append(`<p><i class="fa fa-trash" aria-hidden="true"></i></p> \
+                $(".wrapper").append(`<dl> \
+                                      <p><i class="fa fa-trash" aria-hidden="true"></i></p> \
                                       <dt>${ob.title}</dt> \
-                                      <dd>${ob.text} <br> </dd> `);
+                                      <dd>${ob.text}<br> </dd> \
+                                      </dl> `);
             }
         )
     }
 
     //accоrdion
     function accord() {
-        $('.wrapper > dd').not(':first-of-type').hide();
-        $('.wrapper > dt').on('click', function() {
+        $('.wrapper dl > dd').hide();
+        $('.wrapper dl > dt').on('click', function() {
             let findText = $(this).next();
-            let findWrap = $(this).closest('.wrapper');
+            let findWrap = $(this).closest('dl');
             if (findText.is(':visible')) {
                 findText.slideUp('fast');
             } else {
@@ -59,16 +61,12 @@ $(document).ready(function() {
         });
     }
 
-    //delete
+    //delete - это ппц.
     function del() {
         $('.wrapper p > i').on('click', function() {
-            let thisP  = $(this).closest('p');
-            let findDt = $(thisP).next();
-            let findDd = $(findDt).next();
-            $(findDd).remove();
-            $(findDt).remove();
-            $(thisP).remove();
-            console.log(thisP , findDd, findDt)
+            let findDl  = $(this).closest('dl');
+            $(findDl).remove();
+
         });
     }
 
